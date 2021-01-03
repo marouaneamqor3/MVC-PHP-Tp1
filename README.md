@@ -1,2 +1,3 @@
-# MVC-PHP-Tp1
+# Site de covoiturage
+
 ## TD : Architecture MVC (Partie 1)
