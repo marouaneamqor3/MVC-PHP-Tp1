@@ -1,6 +1,7 @@
 <?php
 require_once'../config/Conf.php';
-class Model{
+class Model
+{
 	public static $pdo;
 
 
@@ -9,13 +10,24 @@ class Model{
 	$database=Conf::getDatabase();
 	$login=Conf::getLogin();
 	$password=Conf::getPassword();
+//echo Conf::getDebug();
 	try {
 		self::$pdo = new PDO("mysql:host=$hostname;dbname=$database",$login, $password);
 		self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		echo "Connected successfully";
+		echo "Connected successfully ";
+		echo "<br>";
 	} catch(PDOException $e) {
-	 	echo "Connection failed: " . $e->getMessage();
+
+		if (Conf::getDebug()==True)
+		{
+	 		echo "Connection failed: " . $e->getMessage();
 		}
+		else
+		{
+			echo "Ouuups Une erreur dans la base acitiver le mode debug";
+		}
+		die();
+	}
 	}
 }
  Model::Init();

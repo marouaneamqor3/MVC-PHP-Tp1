@@ -1,8 +1,6 @@
 <?php
-error_reporting(E_ALL);
-
 class Conf {
-
+	static private $debug= True;
 	static private $database = array(
 		//le nom du host
 		'hostname'=>'localhost',
@@ -22,5 +20,9 @@ class Conf {
         static public function getPassword(){
                 return self::$database['password'];
         }
+	static public function getDebug(){
+	return self::$debug;
+	}
 }
+//echo Conf::getDebug();
 ?>

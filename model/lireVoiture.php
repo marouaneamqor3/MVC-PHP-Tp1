@@ -1,11 +1,11 @@
 <?php
 require_once'Model.php';
+require_once'Voiture.php';
+//$tab_voit = new Voiture();
+$tab_voit = Voiture::getAllVoitures();
+foreach( $tab_voit as $tab){
+	$tab->afficher();
+}
 
-$rep = Model::$pdo->query("SELECT * FROM voiture");
-
-$rep->setFetchMode(PDO::FETCH_CLASS, 'Voiture');
-
-$tab_voit = $rep->fetchAll();
-
-var_dump($tab_voit);
+//var_dump($tab_voit);
 
