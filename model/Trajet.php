@@ -1,3 +1,4 @@
+<?php
 class Trajet{
         public $id;
         public $depart;
@@ -35,3 +36,4 @@ class Trajet{
                 return $rep->fetchAll();
         }
 }
+
