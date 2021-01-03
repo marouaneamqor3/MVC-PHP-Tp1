@@ -27,8 +27,8 @@ class ModelVoiture{
 		$rep->setFetchMode(PDO::FETCH_CLASS, 'ModelVoiture');
 		return $rep->fetchAll();
 	}
-	public static function getImmatriculation(){
-		echo  "$this->immatriculation" ;
+	public function getImmatriculation(){
+		return  $this->immatriculation  ;
 	}
 	public static function getVoitureByImmat($immatriculation){
 		$rep = Model::$pdo->query("SELECT * FROM voiture where immatriculation=$immatriculation");

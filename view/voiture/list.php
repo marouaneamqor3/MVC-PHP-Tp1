@@ -7,8 +7,10 @@
 
 <?php
 
-	foreach ($tab_v as $v)
-		echo "<p> Voiture immatricuation  $v->getImmatriculation()</p>";
+	foreach ($tab_v as $v){
+		echo "<p> Voiture immatricuation >> ". $v->getImmatriculation()."</p>";
+
+	}
 ?>
 
 </body>
