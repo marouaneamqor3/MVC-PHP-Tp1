@@ -1,3 +1,4 @@
 # Site de covoiturage
 
-## TD : Architecture MVC (Partie 1)
+## Développement de site web dynamique avec PHP
+### Filière IRM 3ème année
